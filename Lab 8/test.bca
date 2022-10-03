@@ -1,0 +1,16 @@
+#
+# FILE: test.bca
+#
+
+  push  10
+  store 0
+  push  1
+  store 1
+
+1 load  0   # The "1" is a label.
+  push  1
+  jmp   1
+
+  load  1       # Put the result value on the stack.  The "2" is a label.
+  print         # Print it to stdout.
+  stop          # Stop the program.
